@@ -3,7 +3,11 @@
 
 @import './components//directory/directory.styles.scss';
 @import './components/menu-item/menu-item.styles.scss';
+@import './components/preview-collection/collection-preview.styles.scss';
+@import './components//collection-item//collection-item.styles.scss';
+
 
 body {
   font-family: 'Open Sans Condensed', sans-serif;
+  padding: 20px 60px;
 }

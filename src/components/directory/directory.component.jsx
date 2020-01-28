@@ -14,13 +14,13 @@ class Directory extends React.Component {
           title: 'duck vador',
           imageUrl: 'https://s3.eu-central-1.amazonaws.com/balibart-s3/Designs/5d63a65b1e35cd00177161ac/thumbnail.png',
           id: 1,
-          linkUrl: 'shop/duckvador'
+          linkUrl: 'shop'
         },
         {
           title: 'hacking the world',
           imageUrl: 'https://s3.eu-central-1.amazonaws.com/balibart-s3/Designs/5d63fdef516de00017eb5d5c/thumbnail.png',
           id: 2,
-          linkUrl: 'shop/hackingtheworld'
+          linkUrl: 'test'
         },
         {
           title: 'coding the art',
