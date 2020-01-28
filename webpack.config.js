@@ -20,6 +20,29 @@ module.exports = {
         loader: 'file-loader',
         options: { name: '[name].html' }
       }]
+    },
+    {
+      test: /\.(png|jpe?g|gif)$/i,
+      use: [
+        {
+          loader: 'file-loader'
+        }
+      ]
+
+    },
+    {
+      test: /\.svg$/,
+      use: [
+        {
+          loader: 'babel-loader'
+        },
+        {
+          loader: 'react-svg-loader',
+          options: {
+            jsx: true // true outputs JSX tags
+          }
+        }
+      ]
     }]
   },
   resolve: {
@@ -28,6 +51,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 3000
+    port: 3000,
+    historyApiFallback: true
   }
 }
