@@ -1,4 +1,5 @@
 env:
+
   browser: true
   es6: true
   node: true
@@ -14,12 +15,17 @@ parserOptions:
     jsx: true
   ecmaVersion: 2018
   sourceType: module
-  parser: "babel-eslint"
+
 plugins:
   - react
   - react-hooks
+ 
 rules: {
     "react-hooks/rules-of-hooks": "error", # Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn" # Checks effect dependencies
+    
+    
+    
 }
+# Support for the experimental syntax 'classProperties' isn't currently enabled (18:21):
 

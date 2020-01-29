@@ -1,8 +1,9 @@
+
 import React from 'react'
 
 import FormInput from '../form-input/form-input.component'
 import CustomButton from '../custom-button/custom-button.component'
-
+import { signInWithGoogle, signInWithGitHub } from '../../../server/firebase.utils'
 import './sign-in.styles.scss'
 
 class SignIn extends React.Component {
@@ -52,6 +53,8 @@ class SignIn extends React.Component {
           />
 
           <CustomButton type="submit">Se connecter</CustomButton>
+          <CustomButton onClick={signInWithGoogle}>  <i className="fab fa-google icon-google"></i>&nbsp;  Se connecter avec Google</CustomButton>
+          <CustomButton onClick={signInWithGitHub}>  <i className="fab fa-github icon-github"></i>&nbsp;  Se connecter avec Github</CustomButton>
         </form>
       </section>
     )
