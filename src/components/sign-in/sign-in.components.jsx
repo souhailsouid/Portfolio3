@@ -51,10 +51,11 @@ class SignIn extends React.Component {
             label='password'
             required
           />
-
-          <CustomButton type="submit">Se connecter</CustomButton>
-          <CustomButton onClick={signInWithGoogle}>  <i className="fab fa-google icon-google"></i>&nbsp;  Se connecter avec Google</CustomButton>
-          <CustomButton onClick={signInWithGitHub}>  <i className="fab fa-github icon-github"></i>&nbsp;  Se connecter avec Github</CustomButton>
+          <section className="buttons">
+            <CustomButton type="submit">Se connecter</CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>  <i className="fab fa-google icon-google"></i>&nbsp;  Se connecter avec Google</CustomButton>
+            <CustomButton onClick={signInWithGitHub} isGithubSignIn>  <i className="fab fa-github icon-github"></i>&nbsp;  Se connecter avec Github</CustomButton>
+          </section>
         </form>
       </section>
     )

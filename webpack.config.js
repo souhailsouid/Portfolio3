@@ -46,7 +46,8 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: { 'semantic-ui': path.join(__dirname, 'node_modules', 'semantic-ui-css', 'semantic.min.js') }
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),

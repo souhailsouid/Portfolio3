@@ -1,8 +1,10 @@
 .sign-in {
-  width: 23.75rem;
+  width: 380px;
   display: flex;
   flex-direction: column;
   position: relative;
+
+
 
   .title {
     margin: 10px 0;
@@ -10,8 +12,10 @@
 
   .buttons {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    position: relative;
+
+    
   }
   .logo {
     height: 25%;
@@ -40,7 +44,7 @@
   
   
   .icon-google , .icon-github{
-    line-height: 3.125rem;
+    line-height: 3.725rem;
     font-size: 0.9375rem;   
   }
 

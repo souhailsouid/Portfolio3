@@ -1,3 +1,5 @@
+
+@import 'semantic-ui-css/semantic.min.css';
 @import './pages/homepage/homepage.styles.scss';
 @import './pages/sign-in-and-sign-up/sign-in-and-sign-up.styles.scss';
 
@@ -9,11 +11,17 @@
 @import './components/form-input/form-input.styles.scss';
 @import './components/sign-in/sign-in.styles.scss';
 @import './components/custom-button/custom-button.styles.scss';
+@import './components/dropdownImageTrigger/dropdownImageTrigger.styles.scss';
+
+
 body {
   font-family: 'Open Sans Condensed', sans-serif;
-  padding: 20px 60px;
+  padding: 20px 60px !important;
 }
 a {
-  text-decoration: none;
-  color: black; 
+  text-decoration: none !important;
+  color: black !important; 
+}
+*{
+  box-sizing: border-box !important;
 }
