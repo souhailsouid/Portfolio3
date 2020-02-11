@@ -1,5 +1,6 @@
 $sub-color: grey;
 $main-color: black;
+$error-color: #cc4949;
 
 @mixin shrinkLabel {
   top: -14px;
@@ -50,5 +51,8 @@ $main-color: black;
     &.shrink {
       @include shrinkLabel();
     }
+  }
+  .error-message {
+    color: $error-color
   }
 }

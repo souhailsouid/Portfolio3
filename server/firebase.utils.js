@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import firebase from 'firebase/app'
 import 'firebase/firestore'
@@ -12,6 +13,29 @@ const config = {
   messagingSenderId: '42976614571',
   appId: '1:42976614571:web:f5586ba3489ab07e0a7fee',
   measurementId: 'G-C47JSL1EYP'
+}
+
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return null
+  const userRef = firestore.doc(`users/${userAuth.uid}`)
+  const snapShot = await userRef.get()
+
+  if (!snapShot.exists) {
+    const { displayName, email } = userAuth
+    const createdAt = new Date()
+
+    try {
+      await userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData
+      })
+    } catch (error) {
+      console.log('error creating user', error.message)
+    }
+  }
+  return userRef
 }
 firebase.initializeApp(config)
 

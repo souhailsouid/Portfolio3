@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 import PropTypes from 'prop-types'
-import DropdownImageTrigger from '../dropdownImageTrigger/DropdownImageTrigger.component'
+import DropdownImageTrigger from '../dropdownImageTrigger/dropdownImageTrigger.component.jsx'
+import zenika from '../../assets/znk.png'
 import './header.styles.scss'
 
 const Header = ({ currentUser }) => {
   console.log(currentUser ? currentUser.displayName : null)
   return (
-    <header className="header">
+    <header className="header-menu">
       <Link to="/">
         <img src={logo} className="logo" />
       </Link>
@@ -22,12 +23,13 @@ const Header = ({ currentUser }) => {
         {
           currentUser
             ? <DropdownImageTrigger
-              photoURL={currentUser.photoURL}
+              photoURL={currentUser.photoURL ? currentUser.photoURL : zenika }
             >
-              {currentUser.displayName}
+              {currentUser.displayName }
             </DropdownImageTrigger>
             : <Link className="option" to='/signin'>Se connecter</Link>
         }
+
       </section>
     </header>
   )
