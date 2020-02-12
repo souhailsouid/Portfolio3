@@ -40,5 +40,14 @@
       border: 1px solid black;
     }
   }
+  &.inverted {
+    background-color: rgb(178, 30, 62);
+    color: white;
+    border: 1px solid white;
+    &:hover {
+      background-color: white;
+      color: rgb(178, 30, 62);
+      border:none;
+    }
+  }
 }
-
