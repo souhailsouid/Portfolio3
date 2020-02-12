@@ -5,9 +5,11 @@ import logo from '../../assets/logo.png'
 import PropTypes from 'prop-types'
 import DropdownImageTrigger from '../dropdownImageTrigger/dropdownImageTrigger.component.jsx'
 import zenika from '../../assets/znk.png'
+import CartIcon from '../cart-icon/cart-icon.component'
 import './header.styles.scss'
+import CartDropdown from '../cart-dropdown/cart-dropdown.component'
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, hidden }) => {
   console.log(currentUser ? currentUser.displayName : null)
   return (
     <header className="header-menu">
@@ -30,18 +32,21 @@ const Header = ({ currentUser }) => {
             </DropdownImageTrigger>
             : <Link className="option" to='/signin'>Se connecter</Link>
         }
-
+        <CartIcon/>
       </section>
+      {hidden ? null : <CartDropdown/>}
     </header>
   )
 }
 Header.propTypes = {
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  hidden: PropTypes.bool
 
 }
-const mapStateToProps = state => ({
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
 
-  currentUser: state.user.currentUser
+  currentUser,
+  hidden
 })
 
 export default connect(mapStateToProps)(Header)
