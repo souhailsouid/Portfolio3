@@ -1,27 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import CustomButton from '../custom-button/custom-button.component'
+import CartItem from '../cart-item/cart-item.component'
 
 import './cart-dropdown.styles.scss'
 
-const CartDropdown = ({ history }) =>
+const CartDropdown = ({ cartItems, history }) => (
 
-  (
-    <div className='cart-dropdown'>
-      <div className='cart-items'>
-
-      </div>
-      <CustomButton
-        onClick={() => {
-          history.push('/checkout')
-        }}
-      >
-      GO TO CHECKOUT
-      </CustomButton>
+  <section className='cart-dropdown'>
+    <div className='cart-items' >
+      { cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem}/>)}
     </div>
-  )
+    <CustomButton
+      onClick={() => {
+        history.push('/checkout')
+      }}
+    >
+      ALLER AU PANIER
+    </CustomButton>
+  </section>
+)
+
 CartDropdown.propTypes = {
-  history: PropTypes.object
+  history: PropTypes.object,
+  cartItems: PropTypes.object
 }
-export default withRouter(CartDropdown)
+const mapStateToProps = ({ cart: { cartItems } }) => ({
+  cartItems
+})
+export default withRouter(connect(mapStateToProps, null)(CartDropdown))
