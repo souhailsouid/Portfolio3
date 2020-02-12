@@ -19,7 +19,7 @@ class SignIn extends React.Component {
     console.log('doidjopefe', props)
   }
 
-   handleSubmit = async (event, { history }) => {
+   handleSubmit = async (event) => {
      event.preventDefault()
      this.setState({ notificationError: [] })
      const { email, password } = this.state
@@ -32,18 +32,18 @@ class SignIn extends React.Component {
          email: '',
          password: ''
        })
-       history.push('/')
      } catch (error) {
        this.setState({ notificationError: [error.message] })
      }
    }
 
-   handleChange =(event) => {
+   handleChange = (event) => {
      const { value, name } = event.target
      this.setState({ [name]: value })
    }
 
    render () {
+     console.log('signin', this)
      const { email, password, notificationError } = this.state
      return (
        <section className="sign-in">

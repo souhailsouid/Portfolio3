@@ -5,7 +5,6 @@ env:
   node: true
   jest: true
 parser: "babel-eslint"  
-
 extends:
   - 'plugin:react/recommended'
   -  standard
