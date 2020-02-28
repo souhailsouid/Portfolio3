@@ -2,6 +2,7 @@
 @import 'semantic-ui-css/semantic.min.css';
 @import './pages/homepage/homepage.styles.scss';
 @import './pages/sign-in-and-sign-up/sign-in-and-sign-up.styles.scss';
+@import './pages/checkout/checkout.styles.scss';
 
 @import './components//directory/directory.styles.scss';
 @import './components/menu-item/menu-item.styles.scss';
@@ -16,6 +17,7 @@
 @import './components/cart-icon/cart-icon.styles.scss';
 @import './components/cart-dropdown/cart-dropdown.styles.scss';
 @import './components/cart-item/cart-item.styles.scss';
+
 body {
   font-family: 'Open Sans Condensed', sans-serif;
   padding: 20px 60px !important;
