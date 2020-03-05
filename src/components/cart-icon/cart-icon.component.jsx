@@ -23,6 +23,6 @@ const mapStateToProps = createStructuredSelector({
 })
 CartIcon.propTypes = {
   toggleCartHidden: PropTypes.func,
-  itemCount: PropTypes.func
+  itemCount: PropTypes.obj
 }
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon)

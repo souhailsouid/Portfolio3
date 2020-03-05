@@ -1,6 +1,6 @@
-const SHOP_DATA = [
+const SHOP_DATA = {
 
-  {
+  duckvador: {
     id: 1,
     title: 'Collections Duck Vador',
     routeName: 'duckvador',
@@ -44,7 +44,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  hackingtheworld: {
     id: 2,
     title: 'Collections Hacking the World',
     routeName: 'hackingtheworld',
@@ -88,7 +88,7 @@ const SHOP_DATA = [
 
     ]
   },
-  {
+  coding2art: {
     id: 3,
     title: 'Collections This is Art',
     routeName: 'coding2art',
@@ -108,7 +108,7 @@ const SHOP_DATA = [
 
     ]
   },
-  {
+  femmes: {
     id: 4,
     title: 'Femmes',
     routeName: 'femmes',
@@ -143,7 +143,7 @@ const SHOP_DATA = [
 
     ]
   },
-  {
+  hommes: {
     id: 5,
     title: 'Hommes',
     routeName: 'hommes',
@@ -175,5 +175,5 @@ const SHOP_DATA = [
       }
     ]
   }
-]
+}
 export default SHOP_DATA

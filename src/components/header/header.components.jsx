@@ -19,25 +19,24 @@ const Header = ({ currentUser, hidden }) => {
       <Link to="/">
         <img src={logo} className="logo" />
       </Link>
-      <section className="options">
-        <Link className="option" to="/shop">
-        Shop
-        </Link>
-        <Link className="option" to="/contact">
-        Contact
-        </Link>
-        {
-          currentUser
-            ? <DropdownImageTrigger
-              photoURL={currentUser.photoURL ? currentUser.photoURL : zenika }
-            >
-              {currentUser.displayName }
-            </DropdownImageTrigger>
-            : <Link className="option" to='/signin'>Se connecter</Link>
-        }
-        <CartIcon/>
-      </section>
-      {hidden ? null : <CartDropdown/>}
+
+      { currentUser
+        ? <section className="options">
+          <Link className="option" to="/shop"> Shop </Link>
+          <Link className="option" to="/contact"> Contact </Link>
+          <DropdownImageTrigger
+            photoURL={
+              currentUser.photoURL
+                ? currentUser.photoURL
+                : zenika
+            } >
+            {currentUser.displayName }
+          </DropdownImageTrigger>
+          <CartIcon/>
+          {hidden ? null : <CartDropdown/>}
+        </section>
+        : null}
+
     </header>
   )
 }

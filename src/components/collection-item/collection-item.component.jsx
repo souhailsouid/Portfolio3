@@ -10,11 +10,11 @@ import './collection-item.styles.scss'
 const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item
   return (
-    <article className="collection-item">
+    <article className="collection-item" >
       <img className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
       <footer className="collection-footer">
         <span className="name">{name}</span>
-        <span className="price">{price}&nbsp;euros</span>
+        <span className="price">{price}&nbsp;€</span>
       </footer>
       <CustomButton onClick={() => addItem(item)} inverted>Ajouter au panier</CustomButton>
     </article>
